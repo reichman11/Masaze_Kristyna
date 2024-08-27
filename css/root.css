@@ -1,0 +1,35 @@
+:root {
+  --hover-color: #9b8a79;
+  --text-color: #101010;
+  --heading-3-color: #817060;
+
+  --top-bar-color: #2e2a2a;
+  --responsive-menu-background: #f5f1ec;
+
+  --background-image-color: rgba(255, 255, 255, 0.4);
+  --background-section-color: #ffffff;
+  --background-wrapper-color: #f6f6f6;
+
+  --massages-background: rgba(0, 0, 0, 0.2);
+  --massages-background-hover: rgba(0, 0, 0, 0.1);
+  --massages-inner-color: #fff;
+
+  --shadow-color: rgba(128, 128, 128, 0.2);
+
+  --price-list-background: #e4dccf4a;
+  --price-box-dark-background: #e4dccf59;
+  --price-box-light-background: #e4dccf21;
+
+  --gallery-dots-color: #fff;
+  --gallery-arrow-hover-color: #fff;
+  --gallery-arrow-hover-background: #fff5;
+  --gallery-arrow-color: #fff6;
+  --gallery-arrow-background: #fff4;
+
+  --arrow-up-icon-color: #c3c2c2;
+  --arrow-up-background-color: rgb(230, 230, 230);
+  --arrow-up-hover-color: #b1b1b1;
+
+  --copyright-top-border-color: #2222228d;
+  --background-copyright-color: rgba(255, 255, 255, 0.6);
+}

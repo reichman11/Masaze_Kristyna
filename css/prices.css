@@ -1,0 +1,111 @@
+@import url(root.css);
+
+/* PRICE SECTION */
+.price-wrapper {
+  width: 80%;
+  padding: 2.5rem;
+  background-color: var(--background-section-color);
+}
+
+.price-list h3 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.price-list {
+  background-color: var(--price-list-background);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-box {
+  font-size: 1.125rem;
+  width: 90%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.type-of-massage {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.massage-price-length-box {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-box:nth-last-child(2) .massage-price-length-box {
+  justify-content: flex-end;
+}
+
+.dark {
+  background-color: var(--price-box-dark-background);
+}
+
+.light {
+  background-color: var(--price-box-light-background);
+}
+
+/*MEDIA QUERIES FOR PRICE SECTION*/
+@media (max-width: 1200px) {
+  .price-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .price-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 888px) {
+  .price-wrapper {
+    padding: 1rem;
+  }
+
+  .price-list {
+    padding: 2.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-list {
+    padding: 2rem 0 0 0;
+  }
+
+  .price-box {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .massage-price-length-box {
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: space-evenly;
+  }
+
+  .price-box:nth-last-child(2) .massage-price-length-box {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 576px) {
+  .price-wrapper {
+    padding: 0;
+    width: 100%;
+  }
+}

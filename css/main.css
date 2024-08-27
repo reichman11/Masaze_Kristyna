@@ -1,0 +1,652 @@
+@import url(root.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 300;
+  background-image: url("../images/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--background-image-color);
+  background-blend-mode: lighten;
+}
+
+h3 {
+  color: var(--heading-3-color);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.merienda-font {
+  font-family: "Merienda", cursive;
+  font-weight: 300;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* TOP BAR SECTION */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.top-bar span {
+  margin-left: 1rem;
+}
+
+.social-contact-box {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-contact-box li {
+  margin-left: 1.25rem;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: var(--top-bar-color);
+}
+
+.top-bar a:hover {
+  color: var(--hover-color);
+  transition: 0.5s;
+}
+
+/* NAVIGATION SECTION */
+
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-wrapper a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navigation-wrapper a:hover {
+  color: var(--hover-color);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.logo a:hover {
+  color: var(--hover-color);
+  transition: 0.5s;
+}
+
+.logo img {
+  width: 80px;
+  margin: 0 1.25rem;
+}
+
+.navigation-list {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  list-style: none;
+}
+
+.navigation-list li {
+  padding: 0.938rem 0.625rem;
+}
+
+.navigation-list a {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.navigation-list a:hover {
+  border-bottom: 1px solid var(--hover-color);
+  transition: all 0.5s;
+}
+
+.responsive {
+  background-color: var(--responsive-menu-background);
+}
+
+.icon-menu {
+  display: none;
+  color: var(--light-text-color);
+  cursor: pointer;
+  margin-right: 1.25rem;
+  font-size: 1rem;
+}
+/* MEDIA QUERY - NAVIGATION SECTION  */
+@media (max-width: 992px) {
+  .logo span {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .navigation-wrapper {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navigation-list {
+    display: none;
+    position: absolute;
+    top: 77px;
+    background-color: var(--responsive-menu-background);
+    width: 100%;
+    text-align: center;
+  }
+  .icon-menu {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .navigation-list {
+    display: flex !important;
+  }
+  nav {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+}
+
+/* HERO SECTION */
+.hero-section,
+.about-me-section,
+.price-section,
+.contact-section,
+.massages-list-section {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 3rem 0 12.5rem 0;
+}
+
+.about-me-section,
+.price-section,
+.contact-section,
+.massages-list-section {
+  height: auto;
+}
+.hero-text {
+  text-align: center;
+}
+
+.hero-text h1 {
+  text-transform: uppercase;
+  font-size: calc(2rem + 6vw);
+  font-weight: 200;
+}
+
+.hero-text h2 {
+  font-size: calc(0.625rem + 3vw);
+  font-weight: 300;
+  margin: 5.625rem 0 6.25rem 0;
+}
+
+.hero-text p {
+  font-size: calc(0.625rem + 1vw);
+  font-weight: 200;
+  margin: 2.5rem 0;
+}
+
+.arrow-up {
+  position: fixed;
+  cursor: pointer;
+  display: none;
+  right: 3%;
+  bottom: 8%;
+  font-size: 2.625rem;
+  transition: 0.5s;
+  z-index: 10;
+  color: var(--arrow-up-icon-color);
+  padding: 0 0.5rem;
+  background-color: var(--arrow-up-background-color);
+}
+
+.arrow-up:hover {
+  color: var(--arrow-up-hover-color);
+}
+
+/* NEWS SECTION */
+.news-section {
+  background: var(--background-section-color);
+  padding: 2.5rem 0;
+}
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--background-wrapper-color);
+  box-shadow: 1.25rem 1.25rem 1.25rem var(--shadow-color);
+  padding: 2.5rem;
+}
+
+.news-slider-wrapper {
+  width: 50%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  width: max-content;
+  transition: 1s;
+}
+
+.news-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(30%);
+}
+
+.news-dots {
+  position: absolute;
+  bottom: 10px;
+  color: var(--gallery-dots-color);
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.news-dots li {
+  list-style: none;
+  width: 5px;
+  height: 5px;
+  background-color: var(--gallery-dots-color);
+  margin: 1.25rem;
+  border-radius: 1.25rem;
+  transition: 1s;
+  cursor: pointer;
+}
+.news-dots li.active {
+  width: 20px;
+}
+
+.news-text {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+}
+
+.news-text a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .news-section {
+    padding: 2rem;
+  }
+  .news-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+  }
+  .news-text {
+    width: 100%;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .news-slider-wrapper {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (max-width: 576px) {
+  .news-section {
+    padding: 0;
+  }
+}
+
+/* BACKGROUND SECTION */
+.section-background {
+  /* background-image: url("./images/background-section.jpg"); */
+  background-image: url("../images/hero-section-backgrounf.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+  height: 40vh;
+  width: 100%;
+}
+
+/*MEDIA QUERY - SECTION BACKGROUND*/
+@media (max-width: 768px) {
+  .section-background {
+    height: 30vh;
+  }
+}
+
+/*MASSAGES SECTION*/
+.massages-section {
+  background: var(--background-section-color);
+  padding: 2.5rem 0;
+}
+.massages-wrapper {
+  background-color: var(--background-wrapper-color);
+  box-shadow: 1.25rem 1.25rem 1.25rem var(--shadow-color);
+  padding: 2.5rem;
+}
+
+.massage-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.massage-title h3 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.massage-title p {
+  margin-bottom: 1.875rem;
+}
+
+.massage-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.massage-card {
+  flex-basis: calc(100% / 2 - 0.313rem);
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--massages-background);
+  background-blend-mode: darken;
+  position: relative;
+}
+.massage-card:hover {
+  background-color: var(--massages-background-hover);
+  background-blend-mode: darken;
+  transition: 0.5s;
+}
+.massage-card h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--massages-inner-color);
+  font-size: 1.75rem;
+  text-align: center;
+  margin-top: 1.25rem;
+  padding: 0 0.625rem;
+}
+
+.massage-card a {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--massages-inner-color);
+  text-align: center;
+  padding: 0.625rem 1.875rem;
+  color: var(--massages-inner-color);
+}
+.massage-card a:hover {
+  background-color: var(--background-image-color);
+  transition: 0.5s;
+}
+
+.c1 {
+  background-image: url(../images/massage1.jpg);
+}
+.c2 {
+  background-image: url(../images/massage2.jpg);
+}
+.c3 {
+  background-image: url(../images/massage3.jpg);
+}
+.c4 {
+  background-image: url(../images/massage4.jpg);
+}
+.c5 {
+  background-image: url(../images/massage5.webp);
+}
+.c6 {
+  background-image: url(../images/massage6.jpg);
+}
+
+.benefits-of-massages-text {
+  text-align: center;
+}
+.benefits-of-massages-text h3 {
+  margin: 2.5rem 0 0.625rem 0;
+}
+
+@media (max-width: 768px) {
+  .massages-section {
+    padding: 2rem;
+  }
+  .massages-wrapper {
+    width: 100%;
+    padding: 2rem;
+  }
+  .massage-card {
+    flex-basis: 100%;
+    height: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .massages-section {
+    padding: 0;
+  }
+}
+
+/* GIFTCARD SECTION */
+.gift-card-section {
+  background: var(--background-section-color);
+  padding: 2.5rem 0;
+}
+.gift-card-wrapper {
+  background-color: var(--background-wrapper-color);
+  box-shadow: 1.25rem 1.25rem 1.25rem var(--shadow-color);
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.gift-card-image-wrapper {
+  width: 50%;
+  height: 300px;
+  opacity: 0.8;
+}
+.gift-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 1.25rem 1.25rem 1.25rem var(--shadow-color);
+}
+.gift-card-text {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gift-card-text h3 {
+  text-transform: uppercase;
+}
+
+.gift-card-text p a {
+  color: var(--text-color);
+  font-style: italic;
+}
+@media (max-width: 888px) {
+  .gift-card-wrapper {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .gift-card-section {
+    padding: 2rem;
+  }
+  .gift-card-wrapper {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 2rem;
+  }
+  .gift-card-image-wrapper,
+  .gift-card-text {
+    width: 100%;
+  }
+  .gift-card-image-wrapper {
+    height: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .gift-card-section {
+    padding: 0;
+  }
+}
+
+/* FOOTER SECTION */
+
+.footer-section {
+  background-color: var(--background-section-color);
+  padding: 2.5rem 0;
+}
+.footer-wrapper {
+  background-color: var(--background-wrapper-color);
+  box-shadow: 1.25rem 1.25rem 1.25rem var(--shadow-color);
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  gap: 1rem;
+  padding: 2.5rem;
+}
+
+.footer-wrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.875rem 0 0.625rem 0;
+  color: var(--heading-3-color);
+}
+.contact-box,
+.adress-box,
+.opening-hours-box {
+  flex: 1;
+}
+.contact-box {
+  display: flex;
+  flex-direction: column;
+}
+.contact-box a {
+  text-decoration: none;
+  color: var(--light-text-color);
+}
+.contact-box .social-contact-box {
+  justify-content: space-evenly;
+}
+.contact-box .social-contact-box li {
+  margin: 1rem 0 0 0;
+}
+
+/*COPYRIGHT SECTION*/
+.copyright {
+  text-align: center;
+  padding: 1.25rem 0;
+  font-size: 0.75rem;
+  border-top: 1px solid var(--copyright-top-border-color);
+  background-color: var(--background-copyright-color);
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 2rem;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 0;
+  }
+}
+/* CLASSES FOR JAVASCRIPT */
+@media (min-width: 768px) {
+  .slide-top-bottom {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(-100%);
+    filter: blur(3px);
+  }
+  .slide-right {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(30%);
+    filter: blur(3px);
+  }
+  .slide-left {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-30%);
+    filter: blur(3px);
+  }
+  .fusion {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(3px);
+  }
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
